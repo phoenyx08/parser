@@ -1,0 +1,17 @@
+{
+    "name": "phoenyx-studio/parser",
+    "description": "Simple PHP-library for DOM to Object parsing",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^8.4",
+        "phoenyx-studio/downloader": "v0.3.0-alpha"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuriy Serdyuk",
+            "email": "yury@serdyuk.pp.ua"
+        }
+    ],
+    "require": {}
+}
