@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c33dc8d90524bc78868b4921aea435bd",
+    "content-hash": "12277d4dfb5afe841fe715f08ba4d6d0",
     "packages": [],
     "packages-dev": [
         {
@@ -215,16 +215,16 @@
         },
         {
             "name": "phoenyx-studio/downloader",
-            "version": "v0.3.0-alpha",
+            "version": "v1.0.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phoenyx08/downloader.git",
-                "reference": "07835ba6d7985f9fcaa6b5b967d7a258e4f4ba5b"
+                "reference": "242f789dff645af95017fca3a9bd3f3ccdaebfc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phoenyx08/downloader/zipball/07835ba6d7985f9fcaa6b5b967d7a258e4f4ba5b",
-                "reference": "07835ba6d7985f9fcaa6b5b967d7a258e4f4ba5b",
+                "url": "https://api.github.com/repos/phoenyx08/downloader/zipball/242f789dff645af95017fca3a9bd3f3ccdaebfc0",
+                "reference": "242f789dff645af95017fca3a9bd3f3ccdaebfc0",
                 "shasum": ""
             },
             "require": {
@@ -236,6 +236,11 @@
                 "phpunit/phpunit": "^7.5"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PhoenyxStudio\\": "src/"
@@ -252,7 +257,7 @@
                 }
             ],
             "description": "Simple downloader for a webpage source code",
-            "time": "2019-10-25T21:42:54+00:00"
+            "time": "2019-11-19T20:55:14+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
