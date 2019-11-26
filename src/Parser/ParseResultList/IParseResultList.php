@@ -7,9 +7,9 @@
  */
 namespace PhoenyxStudio\Parser\ParseResultList;
 
-use PhoenyxStudio\Parser\ParseResultListItem\IParseResultListItem;
+use PhoenyxStudio\Parser\ParseResultItemContainer\IParseResultItemContainer;
 
-interface IParseResultList
+interface IParseResultList extends IParseResultItemContainer
 {
-    public function addItem(IParseResultListItem $item);
+
 }

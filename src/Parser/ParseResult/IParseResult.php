@@ -8,9 +8,10 @@
 
 namespace PhoenyxStudio\Parser\ParseResult;
 
+use PhoenyxStudio\Parser\ParseResultItemContainer\IParseResultItemContainer;
 use PhoenyxStudio\Parser\ParseResultList\IParseResultList;
 
-interface IParseResult
+interface IParseResult extends IParseResultItemContainer
 {
     public function addList(IParseResultList $list);
 }

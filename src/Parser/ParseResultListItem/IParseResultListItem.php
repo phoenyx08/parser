@@ -9,5 +9,5 @@ namespace PhoenyxStudio\Parser\ParseResultListItem;
 
 interface IParseResultListItem
 {
-    public function fromObject(stdClass $object);
+    public static function fromObject(stdClass $object);
 }
