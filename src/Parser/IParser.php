@@ -2,7 +2,7 @@
 
 namespace PhoenyxStudio\Parser;
 
-use PhoenyxStudio\Parser\ParseResultItemContainer\IParseResult;
+use PhoenyxStudio\Parser\ParseResult\IParseResult;
 
 interface IParser
 {
