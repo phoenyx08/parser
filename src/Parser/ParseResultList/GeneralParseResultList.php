@@ -6,5 +6,10 @@ use PhoenyxStudio\Parser\ParseResultItemContainer\GeneralParseResultItemContaine
 
 class GeneralParseResultList extends GeneralParseResultItemContainer implements IParseResultList
 {
+    protected $name;
 
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
 }

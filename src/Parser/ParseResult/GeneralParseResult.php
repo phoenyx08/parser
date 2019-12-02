@@ -23,4 +23,9 @@ class GeneralParseResult extends GeneralParseResultItemContainer implements IPar
         $this->items[$newElementKey] = $list;
         return $newElementKey;
     }
+
+    public function getListByIndex($index): IParseResultList
+    {
+        return $this->lists[$index];
+    }
 }
