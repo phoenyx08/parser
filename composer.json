@@ -21,5 +21,7 @@
             "email": "yury@serdyuk.pp.ua"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-dom": "*"
+    }
 }
