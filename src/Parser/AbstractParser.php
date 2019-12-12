@@ -14,7 +14,14 @@ use DOMElement;
 
 abstract class AbstractParser implements IParser
 {
+    protected $domDocument;
+
+    protected $source;
+
+    protected $object;
+
     abstract public function parse(string $html): IParseResult;
+
     protected function getElementByTagName(DOMElement $parent, string $tagName) : DOMElement
     {
         $results = $parent->getElementsByTagName($tagName);
@@ -22,15 +29,17 @@ abstract class AbstractParser implements IParser
             return $result;
         }
     }
-    protected function getHtmlElement(string $source) : DOMElement
+
+    protected function getHtmlElement() : \DOMElement
     {
-        $domDocument = new \DOMDocument('1.0', 'UTF-8');
-        $domDocument->loadHTML($source);
-        $html = $domDocument->getElementsByTagName('html')->item(0);
+        $this->domDocument = new \DOMDocument('1.0', 'UTF-8');
+        $this->domDocument->loadHTML($this->source);
+        $html = $this->domDocument->getElementsByTagName('html')->item(0);
         return $html;
-        /*$htmls = $domDocument->getElementsByTagName('html');
-        foreach($htmls as $html) {
-            return $html;
-        }*/
+    }
+
+    public function ejectObject() : stdClass
+    {
+        return $this->object;
     }
 }

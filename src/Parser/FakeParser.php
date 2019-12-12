@@ -66,6 +66,7 @@ class FakeParser extends AbstractParser
         $parseResult = new GeneralParseResult();
 
         //$doc = new ParsedDocument();
+        //
         $doc = $this->createObject();
 
         $this->source = $source;
