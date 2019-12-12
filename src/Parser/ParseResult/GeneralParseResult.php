@@ -8,6 +8,9 @@ use PhoenyxStudio\Parser\ParseResultList\IParseResultList;
 class GeneralParseResult extends GeneralParseResultItemContainer implements IParseResult
 {
     protected $lists;
+
+    protected $object;
+
     public function addList(IParseResultList $list) : int
     {
         if ($this->lists === null) {
@@ -30,5 +33,15 @@ class GeneralParseResult extends GeneralParseResultItemContainer implements IPar
     public function getListByIndex($index): IParseResultList
     {
         return $this->lists[$index];
+    }
+
+    public function setObject(object $object)
+    {
+        $this->object = $object;
+    }
+
+    public function ejectObject(): object
+    {
+        return $this->object;
     }
 }
