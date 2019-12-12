@@ -11,5 +11,5 @@ use PhoenyxStudio\Parser\ParseResultList\IParseResultListItem;
 
 interface IParseResultItemContainer
 {
-    public function addItem(IParseResultListItem $item);
+    public function addItem(IParseResultListItem $item) : int;
 }
