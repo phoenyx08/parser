@@ -22,4 +22,15 @@ abstract class AbstractParser implements IParser
             return $result;
         }
     }
+    protected function getHtmlElement(string $source) : DOMElement
+    {
+        $domDocument = new \DOMDocument('1.0', 'UTF-8');
+        $domDocument->loadHTML($source);
+        $html = $domDocument->getElementsByTagName('html')->item(0);
+        return $html;
+        /*$htmls = $domDocument->getElementsByTagName('html');
+        foreach($htmls as $html) {
+            return $html;
+        }*/
+    }
 }
