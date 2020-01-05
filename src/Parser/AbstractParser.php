@@ -11,16 +11,23 @@ namespace PhoenyxStudio\Parser;
 
 use PhoenyxStudio\Parser\ParseResult\IParseResult;
 use DOMElement;
+use DOMDocument;
 
 abstract class AbstractParser implements IParser
 {
     protected $domDocument;
+
+    protected $xpath;
 
     protected $source;
 
     protected $object;
 
     abstract public function parse(string $html): IParseResult;
+
+    abstract protected function init();
+
+    abstract protected function getRootElement() : DOMElement;
 
     protected function getElementByTagName(DOMElement $parent, string $tagName) : DOMElement
     {
@@ -30,9 +37,9 @@ abstract class AbstractParser implements IParser
         }
     }
 
-    protected function getHtmlElement() : \DOMElement
+    protected function getHtmlElement() : DOMElement
     {
-        $this->domDocument = new \DOMDocument('1.0', 'UTF-8');
+        $this->domDocument = new DOMDocument('1.0', 'UTF-8');
         $this->domDocument->loadHTML($this->source);
         $html = $this->domDocument->getElementsByTagName('html')->item(0);
         return $html;
@@ -42,4 +49,18 @@ abstract class AbstractParser implements IParser
     {
         return $this->object;
     }
+
+    protected function getFirstElementByXpath(string $xpath, DOMElement $element)
+    {
+        return $this->xpath
+            ->query($xpath, $element)
+            ->item(0);
+    }
+
+    protected function getElementsByXpath(string $xpath, DOMElement $element)
+    {
+        return $this->xpath
+            ->query($xpath, $element);
+    }
+
 }
